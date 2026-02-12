@@ -17,6 +17,19 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  position: relative; /* Make sure pseudo-element is positioned relative to the body */
+}
+
+/* Overlay hitam dengan opacity */
+body::before {
+  content: ''; /* Konten kosong untuk pseudo-element */
+  position: absolute; /* Menempatkan overlay di atas gambar latar belakang */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Warna hitam dengan opacity */
+  z-index: 1; /* Memastikan overlay berada di atas gambar latar belakang */
 }
 
 .todo-container {
@@ -27,6 +40,7 @@ body {
   border-radius: 8px;
   border: 2px solid oklch(75% .18 150); /* Green border to match theme */
   text-align: center;
+  z-index: 2; /* Memastikan todo-container berada di atas overlay */
 }
 
 header h1 {
