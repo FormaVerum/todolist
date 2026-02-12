@@ -8,6 +8,10 @@
 body {
   font-family: 'Courier New', Courier, monospace; /* Monospaced font for hacker vibe */
   background-color: rgba(0, 0, 0, 0.94); /* Dark background with opacity */
+  background-image: url('hero-bg.jpg'); /* Add a hacker background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: oklch(75% .18 150); /* Bright green text */
   display: flex;
   justify-content: center;
