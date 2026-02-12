@@ -41,6 +41,7 @@ body::before {
   border: 2px solid oklch(75% .18 150); /* Green border to match theme */
   text-align: center;
   z-index: 2; /* Memastikan todo-container berada di atas overlay */
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.5); /* Green glow effect */
 }
 
 header h1 {
