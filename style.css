@@ -1,0 +1,108 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace; /* Monospaced font for hacker vibe */
+  background-color: rgba(0, 0, 0, 0.94); /* Dark background with opacity */
+  color: oklch(75% .18 150); /* Bright green text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.todo-container {
+  background-color: #000; /* Black background for the todo container */
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid oklch(75% .18 150); /* Green border to match theme */
+  text-align: center;
+}
+
+header h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-transform: uppercase; /* Uppercase for that hacker feel */
+  letter-spacing: 2px; /* Add some spacing for effect */
+  color: oklch(75% .18 150); /* Green title */
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  background-color: #222; /* Dark input background */
+  border: 2px solid oklch(75% .18 150); /* Green border around the input */
+  color: oklch(75% .18 150); /* Green text in input */
+  font-size: 14px;
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: oklch(75% .18 150); /* Green button */
+  color: #111; /* Dark text on button */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase; /* Button text in uppercase */
+}
+
+button:hover {
+  background-color: #00cc00; /* Slightly darker green on hover */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #222; /* Dark background for tasks */
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  border: 2px solid oklch(75% .18 150); /* Green border around tasks */
+  transition: all 0.3s ease;
+}
+
+li:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Green glow effect */
+}
+
+li.completed span {
+  text-decoration: line-through;
+  color: #777; /* Gray for completed tasks */
+}
+
+li button {
+  background-color: #ff0000; /* Red delete button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+li button:hover {
+  background-color: #cc0000; /* Darker red on hover */
+}
